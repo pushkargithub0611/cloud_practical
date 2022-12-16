@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   {{ form.media }}
+      {% include 'django_quill/media.html' %}
+      <title>
+         Text Editor
+      </title>
+   </head>
+   <body>
+      <form role="form" method="POST">
+         <h1>Online Text Editor</h1>
+         {% csrf_token %}
+      {{form}}
+         <button type="submit" class="btn btnprimary">Submit</button>
+      </form>
+</html>
